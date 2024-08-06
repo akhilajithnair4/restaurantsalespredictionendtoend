@@ -8,6 +8,8 @@ def error_message_details(error,error_detail:sys):
         file_name,exc_tb.tb_lineno,str(error)
     )
 
+    return error_message
+
 
 class CustomException(Exception):
     def __init__(self,error_message,error_detail:sys) :
@@ -18,5 +20,7 @@ class CustomException(Exception):
 
     def __str__(self):
         return self.error_message    
+    
+
     
 
